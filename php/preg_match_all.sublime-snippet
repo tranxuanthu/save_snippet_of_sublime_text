@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+preg_match_all("/${1:\$pattent}/","${2:\$string}",\$matches)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>preg_match_all</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<description>tab</description>
+</snippet>
+preg_match_all("/$pattent/","$string",$matches)

@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+var_dump(debug_backtrace());
+echo 'File: '.__file__.' - Line: '.(__line__-2);
+var_dump(\$$1);
+exit();
+]]></content>
+    <tabTrigger>var_dump</tabTrigger> 
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>tab</description>
+</snippet>

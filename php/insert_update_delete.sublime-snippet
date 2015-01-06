@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+\$result = mysqli_query(\$conn,"insert,update,delete...table");
+if(\$result){
+  // bao thanh cong
+}
+else{
+  // bao that bai
+}
+mysqli_free_result(\$result);
+mysqli_close(\$conn);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>insert,update,deleteDatabase</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+	<description>tab</description>
+</snippet>

@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+<script>
+function Request(URL,Data,CallBack)
+{
+    var xmlhttp;
+    if (window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp = new XMLHttpRequest();
+    }
+    else{// code for IE6, IE5
+      xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    if (Data) {
+        xmlhttp.open("POST",URL,true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send(Data);
+    }else{
+        xmlhttp.open("GET",URL,true);
+        xmlhttp.send();
+    }
+    xmlhttp.onreadystatechange=function(){
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            CallBack(xmlhttp.responseText);
+        }
+    }
+}
+document.getElementById("submit").onclick = function() {
+    Request(url,data,function(msg) {
+        alert(msg);
+    }); 
+} 
+</script>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>js_ajax</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+	<description>tab</description>
+</snippet>

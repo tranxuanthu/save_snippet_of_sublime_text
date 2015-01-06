@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+\$result = 	mysqli_query(\$conn,"${1:select * from table}");	
+while(\$row =  mysqli_fetch_assoc(\$result)){
+	$2
+}
+mysqli_free_result(\$result);
+mysqli_close(\$conn);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>selectDatabase</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js</scope> -->
+	<description>tab</description>
+</snippet>
